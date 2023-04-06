@@ -34,4 +34,8 @@ public class Node<T> {
     public void setNext(T next) {
         this.next = next;
     }
+
+    public int getIndex() {
+        return index;
+    }
 }

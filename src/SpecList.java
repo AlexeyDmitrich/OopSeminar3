@@ -3,7 +3,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-public class SpecList implements Iterable<T>  {
+public class SpecList<T> implements Iterable<T>  {
     private int size;
     private boolean isEmpty;
     private Node<T> first;
@@ -28,12 +28,48 @@ public class SpecList implements Iterable<T>  {
             this.last = this.first;
         }
         else {
-            this.last = new Node<T>(element, this.last, this.first, size);
+            this.last = new Node<T>(element, (T) this.last, (T) this.first, size-1);
             this.size++;
         }
         return last;
     }
 
+    public T getLast(){
+        return this.last.getElement();
+    }
 
+    public T getFirst() {
+        return this.first.getElement();
+    }
 
+    public T getByIndex(int index){
+        if (index == 0){
+            return first.getElement();
+        }
+        if (index == this.size()-1){
+            return last.getElement();
+        }
+        while (true){
+            Node<T> temp = (Node<T>) last.getPrev();
+            if (temp.getIndex() == index) return temp.getElement();
+            temp = (Node<T>) temp.getPrev();
+        }
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
+            int counter = 0;
+            @Override
+            public boolean hasNext() {
+                if (counter<size()) return true;
+                return false;
+            }
+
+            @Override
+            public T next() {
+                return (T) getByIndex(counter++);
+            }
+        };
+    }
 }
