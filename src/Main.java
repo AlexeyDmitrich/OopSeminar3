@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
@@ -11,7 +12,7 @@ public class Main {
                 .addUser(new User("Иван", 21))
                 .addUser(new User("Василий", 42))
                 .addUser(new User("Елена", 21));
-
+        LinkedList<Node> test= new LinkedList<>();
         //System.out.println(form1);
 
         for (User item:form1) {
