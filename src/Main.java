@@ -47,6 +47,7 @@ public class Main {
         for (User item:firma) {
             System.out.println(item);
         }
+        List<> list = new ArrayList<>();
 
     }
 
