@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e192da9b-8992-48fc-a75e-480d361a8404" name="Changes" comment="implemented .add">
+    <list default="true" id="e192da9b-8992-48fc-a75e-480d361a8404" name="Changes" comment="нужно поработать над приведениями типов">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
@@ -25,6 +25,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/liberica-1.8.0_345/src.zip!/java/util/AbstractCollection.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/liberica-1.8.0_345/src.zip!/java/util/AbstractList.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/liberica-1.8.0_345/src.zip!/java/util/ArrayList.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/liberica-1.8.0_345/src.zip!/java/util/LinkedList.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -38,7 +44,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/alexey/edu/Java/OopSeminar3"
+    "last_opened_file_path": "/home/alexey/edu/Java/OopSeminar3",
+    "settings.editor.selected.configurable": "advanced.settings"
   }
 }]]></component>
   <component name="RunManager">
@@ -85,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680812704563</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="нужно поработать над приведениями типов">
+      <created>1680815138236</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680815138236</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,7 +117,8 @@
     <MESSAGE value="seminar complete" />
     <MESSAGE value="started homework" />
     <MESSAGE value="implemented .add" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented .add" />
+    <MESSAGE value="нужно поработать над приведениями типов" />
+    <option name="LAST_COMMIT_MESSAGE" value="нужно поработать над приведениями типов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -116,6 +131,21 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SpecList.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SpecList.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SpecList.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
