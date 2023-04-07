@@ -28,7 +28,7 @@ public class SpecList<T> implements Iterable<T>  {
             this.last = this.first;
         }
         else {
-            this.last = new Node<T>(element, (T) this.last, (T) this.first, size-1);
+            this.last = new Node<T>(element, this.last, this.first, size-1);
             this.size++;
         }
         return last;
@@ -49,11 +49,12 @@ public class SpecList<T> implements Iterable<T>  {
         if (index == this.size()-1){
             return last.getElement();
         }
-        while (true){
-            Node<T> temp = (Node<T>) last.getPrev();
+        Node<T> temp = last.getPrev();
+        while (temp != null){
             if (temp.getIndex() == index) return temp.getElement();
-            temp = (Node<T>) temp.getPrev();
+            temp = temp.getPrev();
         }
+        return null;
     }
 
     @Override
@@ -62,13 +63,13 @@ public class SpecList<T> implements Iterable<T>  {
             int counter = 0;
             @Override
             public boolean hasNext() {
-                if (counter<size()) return true;
+                if (counter<size()-1) return true;
                 return false;
             }
 
             @Override
             public T next() {
-                return (T) getByIndex(counter++);
+                return getByIndex(counter++);
             }
         };
     }

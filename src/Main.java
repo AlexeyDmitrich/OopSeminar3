@@ -5,14 +5,14 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        SpecList<User> list = new SpecList<>();
-        list.add(new User("Василий", 32));
-        list.add(new User("Елена", 24));
-        list.add(new User("Иван", 21));
-        list.add(new User("Василий", 42));
-        list.add(new User("Елена", 21));
+        SpecList<Tester> list = new SpecList<>();
+        list.add(new Tester("Василий", 1));
+        list.add(new Tester("Елена", 2));
+        list.add(new Tester("Иван", 3));
+        list.add(new Tester("Василий", 4));
+        list.add(new Tester("Елена", 5));
 
-        for (User item:list) {
+        for (Tester item:list) {
             System.out.println(item);
         }
 
