@@ -28,7 +28,8 @@ public class SpecList<T> implements Iterable<T>  {
             this.last = this.first;
         }
         else {
-            this.last = new Node<T>(element, this.last, this.first, this.last.getIndex()+1);
+            this.last = new Node<T>(element, this.last, null, this.last.getIndex()+1);
+            this.last.getPrev().setNext(this.last);
             this.size++;
         }
         return last;
@@ -55,6 +56,35 @@ public class SpecList<T> implements Iterable<T>  {
             temp = temp.getPrev();
         }
         return null;
+    }
+
+    public Node<T> getNodeByIndex(int index){
+        if (index == 0){
+            return first;
+        }
+        if (index == this.size()-1){
+            return last;
+        }
+        Node<T> temp = last.getPrev();
+        while (temp != null){
+            if (temp.getIndex() == index) return temp;
+            temp = temp.getPrev();
+        }
+        return null;
+    }
+
+    public void remove(int index){
+        Node<T> element = getNodeByIndex(index);
+        Node<T> prev = element.getPrev();
+        Node<T> next = element.getNext();
+
+        prev.setNext(next);
+        next.setPrev(prev);
+
+        for (int i = next.getIndex(); i <= this.last.getIndex(); i++) {
+            Node<T> changed = getNodeByIndex(i);
+            changed.setIndex(i-1);
+        }
     }
 
     @Override

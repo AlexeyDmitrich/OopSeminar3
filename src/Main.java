@@ -16,16 +16,30 @@ public class Main {
             System.out.println(item);
         }
 
-//        System.out.println("0");
-//        System.out.println(list.getByIndex(0));
-//        System.out.println("\n1");
-//        System.out.println(list.getByIndex(1));
-//        System.out.println("\n2");
-//        System.out.println(list.getByIndex(2));
-//        System.out.println("\n3");
-//        System.out.println(list.getByIndex(3));
-//        System.out.println("\n4");
-//        System.out.println(list.getByIndex(4));
+        System.out.println();
+        System.out.println("=============================");
+        System.out.println();
+        list.remove(2);
+
+        for (Tester item:list) {
+            System.out.println(item);
+        }
+
+        System.out.println("0");
+        System.out.println(list.getByIndex(0));
+        System.out.println(list.getNodeByIndex(0));
+        System.out.println("\n1");
+        System.out.println(list.getByIndex(1));
+        System.out.println(list.getNodeByIndex(1));
+        System.out.println("\n2");
+        System.out.println(list.getByIndex(2));
+        System.out.println(list.getNodeByIndex(2));
+        System.out.println("\n3");
+        System.out.println(list.getByIndex(3));
+        System.out.println(list.getNodeByIndex(3));
+        System.out.println("\n4");
+        System.out.println(list.getByIndex(4));
+        System.out.println(list.getNodeByIndex(4));
 
     }
 

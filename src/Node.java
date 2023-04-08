@@ -38,4 +38,29 @@ public class Node<T> {
     public int getIndex() {
         return index;
     }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
+
+    @Override
+    public String toString() {
+        String prevs;
+        String nexts;
+        if (prev == null) prevs = "Отсутствует";
+        else prevs = prev.simple();
+        if (next == null) nexts = "Отсутствует";
+        else nexts = next.simple();
+        return "Node\n" +
+                "element=" + element +
+                "\nprev=" + prevs +
+                "\nnext=" + nexts +
+                "\nindex=" + index +
+                '.';
+    }
+
+    public String simple (){
+
+        return String.format("%d : %s", index, element);
+    }
 }
