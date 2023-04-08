@@ -28,7 +28,7 @@ public class SpecList<T> implements Iterable<T>  {
             this.last = this.first;
         }
         else {
-            this.last = new Node<T>(element, this.last, this.first, size-1);
+            this.last = new Node<T>(element, this.last, this.first, this.last.getIndex()+1);
             this.size++;
         }
         return last;
@@ -63,7 +63,7 @@ public class SpecList<T> implements Iterable<T>  {
             int counter = 0;
             @Override
             public boolean hasNext() {
-                if (counter<size()-1) return true;
+                if (counter<size()) return true;
                 return false;
             }
 
